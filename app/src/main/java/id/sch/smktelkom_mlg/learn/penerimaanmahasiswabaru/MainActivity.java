@@ -7,6 +7,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -14,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     TextView hasil;
     RadioGroup jk;
     CheckBox SI, TP, KB;
+    Spinner sp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         nama = (EditText) findViewById(R.id.editTextNama);
         telp = (EditText) findViewById(R.id.editTextNoTelp);
         hasil = (TextView) findViewById(R.id.textViewHasil);
+        sp = (Spinner) findViewById(R.id.spinnerAsalProvinsi);
         jk = (RadioGroup) findViewById(R.id.RadioGroupJK);
         SI = (CheckBox) findViewById(R.id.checkBoxSI);
         TP = (CheckBox) findViewById(R.id.checkBoxTP);
@@ -59,7 +62,8 @@ public class MainActivity extends AppCompatActivity {
                 builder.append("Nama : " + nm + "\n");
                 builder.append("Nomor Telp : " + nmr + "\n");
                 builder.append("Jenis Kelamin anda :" + hsl + "\n");
-                builder.append(hl);
+                builder.append(hl + "\n");
+                builder.append("Wilayah Provinsi : " + sp.getSelectedItem().toString());
                 hasil.setText(builder);
             }
         }
