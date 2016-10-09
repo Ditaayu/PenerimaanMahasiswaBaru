@@ -8,12 +8,14 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:weightSum="1"
     tools:context="id.sch.smktelkom_mlg.learn.penerimaanmahasiswabaru.MainActivity">
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="235dp"
-        android:layout_height="157dp"
+        android:layout_width="221dp"
+        android:layout_height="132dp"
+        android:layout_weight="0.42"
         android:src="@drawable/logo" />
 
     <TextView
